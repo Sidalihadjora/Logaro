@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لعبة لوڨارو (Loup-Garou)</title>
+    <style>
+        /* إعدادات أساسية */
+        body {
+            margin: 0;
+            font-family: "Arial", sans-serif;
+            background: linear-gradient(to bottom, #1e1e2f, #2a2a40);
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-weight: bold;
+            text-align: center;
+        }
+
+        a {
+            color: #f39c12;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* تأثيرات بصرية */
+        header {
+            text-align: center;
+            background: #12121b;
+            padding: 20px 10px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        header h1 {
+            color: #f39c12;
+        }
+
+        .content {
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .section {
+            margin: 30px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .section h2 {
+            border-bottom: 2px solid #f39c12;
+            padding-bottom: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background: #f39c12;
+            color: #fff;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #e67e22;
+        }
+
+        /* تأثيرات */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>لعبة لوڨارو (Loup-Garou)</h1>
+    </header>
+
+    <div class="content">
+        <div class="section">
+            <h2>فكرة اللعبة</h2>
+            <p>
+                لعبة لوڨارو (Loup-Garou) أو لعبة "المستذئبين" هي لعبة جماعية تعتمد على الأدوار والاستراتيجيات الاجتماعية.
+                تجمع بين التشويق والمرح، حيث يتمثل دور اللاعبين في محاولة كشف هوية المستذئبين ضمن أهل القرية أو الدفاع عن أنفسهم
+                إذا كانوا منهم.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>طريقة اللعب</h2>
+            <h3>1. توزيع الأدوار</h3>
+            <p>
+                يتم توزيع بطاقات الأدوار على اللاعبين سرًا.
+            </p>
+            <h3>2. مرحلة الليل</h3>
+            <p>
+                يغمض الجميع أعينهم، بينما المستذئبون يتعرفون على بعضهم ويختارون ضحية.
+                شخصيات مثل العرافة والساحرة تقوم بدورها باستخدام مهاراتها في مساعدة القرويين أو التأثير على سير اللعبة.
+            </p>
+            <h3>3. مرحلة النهار</h3>
+            <p>
+                يفتح الجميع أعينهم ويبدأ النقاش والتصويت لمحاولة كشف المستذئبين.
+                اللاعبون يتبادلون الاتهامات والدفاع عن أنفسهم لإقناع الآخرين ببراءتهم أو لإخفاء حقيقتهم.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>لماذا تلعب هذه اللعبة؟</h2>
+            <p>
+                اللعبة تعتمد على الذكاء، الملاحظة، والإقناع، وتُعتبر وسيلة ممتعة للتفاعل الاجتماعي بين الأصدقاء أو العائلة.
+            </p>
+            <a href="#" class="btn">تعرف على المزيد</a>
+        </div>
+    </div>
+
+    <script>
+        // تأثير زر العودة للأعلى
+        const btn = document.createElement('button');
+        btn.textContent = "⬆️ أعلى";
+        btn.style.cssText = `
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px;
+            background: #f39c12;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        `;
+        document.body.appendChild(btn);
+
+        btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 200) {
+                btn.style.display = 'block';
+            } else {
+                btn.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>
